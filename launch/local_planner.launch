@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+<group ns = "X1">
+    <arg name="resolution" value="0.1" />
+    <node pkg="local_planner" type="local_planner" name="local_planner" output="screen">
+        <!-- Topic remaps -->
+        <remap from="map" to="edt"/>
+        <remap from="start" to="odometry"/>
+        <remap from="goal" to="/clicked_point"/>
+        <!-- <remap from="path" to="planned_path"/> -->
+
+        <!-- Params -->
+        <param name="update_rate" value="5.0"/>
+        <param name="fixed_frame" type="string" value="world"/>
+        <param name="resolution" value="$(arg resolution)"/>
+        <param name="min_obstacle_proximity" value="0.2"/>
+    </node>
+
+    <include file="$(find marble_guidance)/launch/guidance.launch"/>
+</group>
+
+</launch>

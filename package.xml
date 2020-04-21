@@ -1,0 +1,25 @@
+<package format="2">
+	<name>local_planner</name>
+	<version>0.1.0</version>version
+	<description>
+	  This package subscribes to an PointClou2 message (cost map), a current Pose, and a goal Pose then plans a path.
+	</description>
+	<maintainer email="andmills17@gmail.com">Andrew B Mills</maintainer>
+
+	<url>https://github.com/andrewbmills/local_planner</url>
+	<author>Andrew B Mills</author>
+	  <license>TODO</license>
+
+	<buildtool_depend>catkin</buildtool_depend>
+	<depend>roscpp</depend>
+	<depend>rospy</depend>
+	<depend>rosconsole</depend>
+	<depend>rostime</depend>
+	<depend>roscpp_serialization</depend>
+	<depend>boost_system</depend>
+	<depend>pcl</depend>
+	<depend>pcl_conversions</depend>
+	<depend>pcl_ros</depend>
+	<depend>sensor_msgs</depend>
+	<depend>std_msgs</depend>
+</package>
