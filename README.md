@@ -1,2 +1,2 @@
-# ground_finder
-Publishes free voxels adjacent to the ground in octomaps.
+# local_planner
+A 3D implimentation of A* in ROS.
